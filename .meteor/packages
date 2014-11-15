@@ -7,7 +7,5 @@ meteor-platform
 autopublish
 insecure
 iron:router
-spin
 accounts-password
 chrismbeckett:toastr
-
