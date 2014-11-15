@@ -6,5 +6,8 @@
 meteor-platform
 autopublish
 insecure
-bootstrap
 iron:router
+spin
+accounts-password
+chrismbeckett:toastr
+
