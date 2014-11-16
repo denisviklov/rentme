@@ -134,7 +134,8 @@ Template.googlemap.rendered=function(){
     if(GoogleMaps.ready()){
       this.mapOptions={
         center:new google.maps.LatLng(11.5448729,104.8921668),
-        zoom:14
+        zoom:14,
+        scrollwheel: false,
       };
       this.map=new google.maps.Map(this.find("#map-canvas"),this.mapOptions);
       var self = this;
