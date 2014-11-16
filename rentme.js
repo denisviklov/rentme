@@ -134,7 +134,7 @@ Template.googlemap.rendered=function(){
     if(GoogleMaps.ready()){
       this.mapOptions={
         center:new google.maps.LatLng(11.5448729,104.8921668),
-        zoom:12
+        zoom:14
       };
       this.map=new google.maps.Map(this.find("#map-canvas"),this.mapOptions);
       var self = this;
@@ -175,9 +175,15 @@ Template.googlemap.rendered=function(){
 
 Template.landing.helpers({
   dots: GeoData.find({}, {limit:4}),
-  getFirst: function(items){return items[0]}, 
+  getFirst: function(items){return items[0]},
+
 });
 
+Template.search.helpers({
+  dots: GeoData.find({}, {limit:4}),
+  getFirst: function(items){return items[0]},
+  getRandom: function(){return parseInt(Math.random() * (300 - 12) + 12);}
+});
 
 Template.agentarea.events({
   "submit": function(ev){

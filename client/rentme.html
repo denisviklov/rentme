@@ -200,13 +200,13 @@
                                         <a href="#link"><img class="img-responsive img-thumbnail" src="img/item-large.jpg"></a>
                                     </div><!-- /.col -->
                                     <div class="col-sm-12 col-md-7">
-                                        <h3><a href="#link">294 River Road, <span class="text-muted">Windsor CA, 95492</span></a></h3>
+                                        <h3><a href="#link">294 River Road, <span class="text-muted">Phnom Penh, 95492</span></a></h3>
                                         <p><span class="label label-danger">SPONSORED</span> This home offers a great floor plan with kitchen open to a spacious living room and dining area.</p>
                                         <ul class="list-unstyled">
-                                            <li><i class="fa fa-fw fa-th"></i> 1.460 Ft<sup>2</sup></li>
+                                            <li><i class="fa fa-fw fa-th"></i> 145 M<sup>2</sup></li>
                                             <li><i class="fa fa-fw fa-columns"></i> 2 Beds</li>
                                             <li><i class="fa fa-fw fa-female"></i> 1,5 Bathrooms</li>
-                                            <li><i class="fa fa-fw fa-truck"></i> 2 Garage</li>
+                                            <li><i class="fa fa-fw fa-truck"></i> Garage</li>
                                             <li><i class="fa fa-fw fa-signal"></i> Internet</li>
                                         </ul>
                                         <p><a href="#link" class="btn btn-primary">View More »</a></p>
@@ -216,12 +216,13 @@
                         </article><!-- /.post -->
                     </div><!-- /.row -->
                     <div class="row">
+                        {{#each dots}}
                         <article class="post">
                             <div class="col-sm-12 col-md-5">
-                                <a href="#link"><img class="img-responsive img-thumbnail" src="img/item-small.jpg"></a>
+                                <a href="#link"><img class="img-responsive img-thumbnail" src="{{getFirst images}}"></a>
                             </div><!-- /.col -->
                             <div class="col-sm-12 col-md-7">
-                                <h3><a href="#link">4384 Timberbrook Lane, <span class="text-muted">Loveland, CO 80537</span></a></h3>
+                                <h3><a href="/detailed/1/">Lane {{getRandom}}, <span class="text-muted">Phnom Penh, CO 80537</span></a></h3>
                                 <p>This home offers a great floor plan with kitchen open to a spacious living room and dining area.</p>
                                 <ul class="list-unstyled">
                                     <li><i class="fa fa-fw fa-th"></i> 1.460 Ft<sup>2</sup></li>
@@ -233,33 +234,15 @@
                                 <p><a href="#link" class="btn btn-primary">View More »</a></p>
                             </div><!-- /.col -->
                         </article><!-- /.post -->
+                        {{/each}}
                     </div><!-- /.row -->
                     <div class="row">
                         <article class="post">
                             <div class="col-sm-12 col-md-5">
-                                <a href="#link"><img class="img-responsive img-thumbnail" src="img/item-small.jpg"></a>
+                                <a href="/detailed/1/"><img class="img-responsive img-thumbnail" src="img/item-small.jpg"></a>
                             </div><!-- /.col -->
                             <div class="col-sm-12 col-md-7">
-                                <h3><a href="#link">40 Devils Hill Road, <span class="text-muted">Jackson, MS 39211</span></a></h3>
-                                <p>This home offers a great floor plan with kitchen open to a spacious living room and dining area.</p>
-                                <ul class="list-unstyled">
-                                    <li><i class="fa fa-fw fa-th"></i> 1.460 Ft<sup>2</sup></li>
-                                    <li><i class="fa fa-fw fa-columns"></i> 2 Beds</li>
-                                    <li><i class="fa fa-fw fa-female"></i> 1,5 Bathrooms</li>
-                                    <li><i class="fa fa-fw fa-truck"></i> 2 Garage</li>
-                                    <li><i class="fa fa-fw fa-signal"></i> Internet</li>
-                                </ul>
-                                <p><a href="#link" class="btn btn-primary">View More »</a></p>
-                            </div><!-- /.col -->
-                        </article><!-- /.post -->
-                    </div><!-- /.row -->
-                    <div class="row">
-                        <article class="post">
-                            <div class="col-sm-12 col-md-5">
-                                <a href="#link"><img class="img-responsive img-thumbnail" src="img/item-small.jpg"></a>
-                            </div><!-- /.col -->
-                            <div class="col-sm-12 col-md-7">
-                                <h3><a href="#link">2323 Wildrose Lane, <span class="text-muted">Highland Park, MI 48203</span></a></h3>
+                                <h3><a href="#link">40 Main Road, <span class="text-muted">Phnom Penh, MS 39211</span></a></h3>
                                 <p>This home offers a great floor plan with kitchen open to a spacious living room and dining area.</p>
                                 <ul class="list-unstyled">
                                     <li><i class="fa fa-fw fa-th"></i> 1.460 Ft<sup>2</sup></li>
