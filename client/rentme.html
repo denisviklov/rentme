@@ -147,6 +147,15 @@
                                     </optgroup>
                                 </select>
                             </div><!-- /.col -->
+                            <div class="col-md-3">
+                                <label for="">Guards:</label>
+                                <select class="form-control selectpicker show-tick" title='Choose One' data-live-search="true" data-style="btn-primary">
+                                    <optgroup label="Location:">
+                                        <option>Yes</option>
+                                        <option>No</option>
+                                    </optgroup>
+                                </select>
+                            </div><!-- /.col -->
                             <div class="col-md-2">
                                 <label for="">Price:</label>
                                 <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
@@ -159,8 +168,8 @@
                                     </optgroup>
                                 </select>
                             </div><!-- /.col -->
-                            <div class="col-md-2">
-                                <label for="">Ready?</label>
+                            <div class="col-md-2 col-md-offset-5">
+                                <label for=""> </label>
                                 <a href="/search" class="btn btn-primary btn-block">Search</a>
                             </div>
                         </div>
@@ -595,90 +604,29 @@
             <h2 class="text-center headline">Featured This Week</h2>
             <br class="spacer-lg">
             <div class="row">
+            {{#each dots}}
                 <div class="col-sm-6 col-md-3">
                     <div class="thumbnail text-default">
                         <div class="overlay-container">
-                            <img src="img/item-large.jpg">
+                            <img src="{{getFirst images}}">
                             <div class="overlay-content">
                                 <h3 class="h4 headline">Great Deal</h3>
                                 <p>So you know you're getting a top quality property from an experienced team.</p>
                             </div><!-- /.overlay-content -->
                         </div><!-- /.overlay-container -->
                         <div class="thumbnail-meta">
-                            <p><i class="fa fa-fw fa-home"></i> 1199 Pacific Hwy #110</p>
-                            <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
+                            <p><i class="fa fa-fw fa-home"></i>{{ title}}</p>
+                            <p><i class="fa fa-fw fa-map-marker"></i> Phnom Penh, CA 92101</p>
                         </div>
                         <div class="thumbnail-meta">
-                            <i class="fa fa-fw fa-info-circle"></i> 1460 Ft | 2 Bed | 1,5 Bath | 2 Garage
+                            <i class="fa fa-fw fa-info-circle"></i> {{square}} M | {{bedrooms}} Bed | {{baths}} Bath | {{#if garage}} Garage{{/if}}
                         </div>
                         <div class="thumbnail-meta">
-                            <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">350.000</span> <a href="#link" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
+                            <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">{{price}}</span> <a href="#link" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
                         </div>
                     </div><!-- /.thumbnail -->
                 </div><!-- /.col -->
-                <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail text-default">
-                        <div class="overlay-container">
-                            <img src="img/item-large.jpg">
-                            <div class="overlay-content">
-                                <h3 class="h4 headline">Great Deal</h3>
-                                <p>So you know you're getting a top quality property from an experienced team.</p>
-                            </div><!-- /.overlay-content -->
-                        </div><!-- /.overlay-container -->
-                        <div class="thumbnail-meta">
-                            <p><i class="fa fa-fw fa-home"></i> 1199 Pacific Hwy #110</p>
-                            <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
-                        </div>
-                        <div class="thumbnail-meta">
-                            <i class="fa fa-fw fa-info-circle"></i> 1460 Ft | 2 Bed | 1,5 Bath | 2 Garage
-                        </div>
-                        <div class="thumbnail-meta">
-                            <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">350.000</span> <a href="#link" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div><!-- /.thumbnail -->
-                </div><!-- /.col -->
-                <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail text-default">
-                        <div class="overlay-container">
-                            <img src="img/item-large.jpg">
-                            <div class="overlay-content">
-                                <h3 class="h4 headline">Great Deal</h3>
-                                <p>So you know you're getting a top quality property from an experienced team.</p>
-                            </div><!-- /.overlay-content -->
-                        </div><!-- /.overlay-container -->
-                        <div class="thumbnail-meta">
-                            <p><i class="fa fa-fw fa-home"></i> 1199 Pacific Hwy #110</p>
-                            <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
-                        </div>
-                        <div class="thumbnail-meta">
-                            <i class="fa fa-fw fa-info-circle"></i> 1460 Ft | 2 Bed | 1,5 Bath | 2 Garage
-                        </div>
-                        <div class="thumbnail-meta">
-                            <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">350.000</span> <a href="#link" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div><!-- /.thumbnail -->
-                </div><!-- /.col -->
-                <div class="col-sm-6 col-md-3">
-                    <div class="thumbnail text-default">
-                        <div class="overlay-container">
-                            <img src="img/item-large.jpg">
-                            <div class="overlay-content">
-                                <h3 class="h4 headline">Great Deal</h3>
-                                <p>So you know you're getting a top quality property from an experienced team.</p>
-                            </div><!-- /.overlay-content -->
-                        </div><!-- /.overlay-container -->
-                        <div class="thumbnail-meta">
-                            <p><i class="fa fa-fw fa-home"></i> 1199 Pacific Hwy #110</p>
-                            <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
-                        </div>
-                        <div class="thumbnail-meta">
-                            <i class="fa fa-fw fa-info-circle"></i> 1460 Ft | 2 Bed | 1,5 Bath | 2 Garage
-                        </div>
-                        <div class="thumbnail-meta">
-                            <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">350.000</span> <a href="#link" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div><!-- /.thumbnail -->
-                </div><!-- /.col -->
+                {{/each}}
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section>
@@ -1074,6 +1022,9 @@
                         <label>
                           <input type="checkbox"> wifi
                         </label>             
+                    </div>
+                    <div class="form-group">
+                        <button id="upload">Upload Images</button>
                     </div>
                     <button type="submit" class="btn btn-primary">Create</button>
                 </form>
