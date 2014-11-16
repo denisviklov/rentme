@@ -1,4 +1,8 @@
 if (Meteor.isClient) {
+
+Meteor.subscribe('geoPub');
+var GeoData = new Meteor.Collection('geodata');
+
 GoogleMaps={
   // public methods
   config:function(options){
@@ -42,8 +46,12 @@ Template.landing.events({
   'mouseleave .tag': function(ev){
     $(ev.currentTarget).toggleClass('trans');
   },
-  'click .tag': function(ev){
-    $(ev.currentTarget).removeClass('tag');
+  'click .tag, .trans': function(ev){
+    var icon = $(ev.currentTarget);
+    if(icon.hasClass('tag'))
+      {icon.removeClass('tag');}
+    else
+      {icon.addClass('tag');}
   },
 });
 
@@ -117,36 +125,69 @@ Template.googlemap.destroyed = function() {
 
 Template.googlemap.rendered=function(){
   this.autorun(_.bind(function(){
+    console.log(GeoData.findOne());
+    if(GeoData.findOne())
+      var test = GeoData.find();
+    else
+      var test = {long:0, lat:0};
+    console.log(test.lat, test.long);
     if(GoogleMaps.ready()){
       this.mapOptions={
         center:new google.maps.LatLng(11.5448729,104.8921668),
         zoom:12
       };
       this.map=new google.maps.Map(this.find("#map-canvas"),this.mapOptions);
+      var self = this;
+      test.forEach(function(item){
+      console.log(item)
+      if(item.security<3){
+        var fillColor ='#FF0033';
+      }
+      else if(item.security==5){
+        var fillColor ='#99FF33';
+      }
+      else{
+        var fillColor ='#CCFF00';
+      }
 
       this.populationOptions = {
         strokeColor: '#FF0000',
         strokeOpacity: 0.4,
         strokeWeight: 2,
-        fillColor: '#FF0033',
+        fillColor: fillColor,
         fillOpacity: 0.35,
-        map: this.map,
-        center: new google.maps.LatLng(11.6449730,104.8921668),
-        radius: 10000
+        map: self.map,
+        //center: new google.maps.LatLng(11.6449730,104.8921668),
+        center: new google.maps.LatLng(item.location.lat,item.location.long),
+        radius: 500
       };
-      this.cityCircle = new google.maps.Circle(this.populationOptions);
-      this.populationOptions1 = {
-        strokeColor: '#FF0000',
-        strokeOpacity: 0.4,
-        strokeWeight: 2,
-        fillColor: '#33CC66',
-        fillOpacity: 0.35,
-        map: this.map,
-        center: new google.maps.LatLng(11.3449730,104.8981668),
-        radius: 21000
-      };
-      this.cityCircle1 = new google.maps.Circle(this.populationOptions1);
+      var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(item.location.lat,item.location.long),
+          map: self.map,
+          title: item.title
+      });
+      marker.setMap(self.map);
+      this.cityCircle = new google.maps.Circle(this.populationOptions);        
+      });
     }
   },this));
 };
+
+Template.landing.helpers({
+  dots: GeoData.find({}, {limit:4}),
+  getFirst: function(items){return items[0]}, 
+});
+
+
+Template.agentarea.events({
+  "submit": function(ev){
+    ev.preventDefault();
+    ev.stopPropagation();
+    var form = $(ev.currentTarget);
+    var items = form.serializeArray();
+    var data = {};
+    items.map(function(x){data[x.name] = x.value;});
+  },
+});
+
 }
