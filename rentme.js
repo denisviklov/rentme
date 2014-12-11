@@ -1,6 +1,14 @@
 if (Meteor.isClient) {
-    Meteor.subscribe('geoPub');
-    var GeoData = new Meteor.Collection('geodata');
+    PropertyCollection = new Meteor.Collection('properties');
+    AddressesCollection = new Meteor.Collection('addresses');
+    CitiesCollection = new Meteor.Collection('cities');
+    AreasCollection = new Meteor.Collection('areas');
+
+    Meteor.subscribe('propertiesPub');
+    Meteor.subscribe('agentsPub');
+    Meteor.subscribe('addressesPub');
+    Meteor.subscribe('citiesPub');
+    Meteor.subscribe('areasPub');
     GoogleMaps = {
         // public methods
         config:             function (options) {
@@ -10,6 +18,24 @@ if (Meteor.isClient) {
             this._loadingDependency.depend();
             return this._ready;
         },
+        placesSearchCallback: function(results, status){
+            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                for (var i = 0; i < results.length; i++) {
+                    console.log("place: ", results[i]);
+                    var placeLoc = results[i].geometry.location;
+                    var marker = new google.maps.Marker({
+                        map: GoogleMaps.map,
+                        position: results[i].geometry.location,
+                        icon: "https://www.filepicker.io/api/file/gyNUDr3oRymf4GsaTgA5/convert?w=32"
+                    });
+                    GoogleMaps.searchMarkers.push(marker);
+
+                    var infoWindow = new google.maps.InfoWindow();
+
+                    addMarkerListener(marker, infoWindow, results[i], GoogleMaps.map);
+                }
+            }
+        },
         // private methods
         _loaded:            function () {
             this._ready = true;
@@ -17,6 +43,7 @@ if (Meteor.isClient) {
         },
         // public members
         apiKey:             "",
+        searchMarkers: [],
         // private members
         _ready:             false,
         _loadingDependency: new Deps.Dependency()
@@ -31,59 +58,8 @@ if (Meteor.isClient) {
         if (!GoogleMaps.apiKey) {
             throw new Meteor.Error(-1, "API key not set, use GoogleMaps.config({apiKey:YOUR_API_KEY});");
         }
-        $.getScript("https://maps.googleapis.com/maps/api/js?key=" + GoogleMaps.apiKey + "&callback=_googleMapsLoaded");
+        $.getScript("https://maps.googleapis.com/maps/api/js?key=" + GoogleMaps.apiKey + "&callback=_googleMapsLoaded&libraries=places");
     });
-
-    Template.landing.events({
-        'click #search':      function (event) {
-            Router.go('/search');
-        },
-        'mouseenter .tag':    function (ev) {
-            $(ev.currentTarget).toggleClass('trans');
-        },
-        'mouseleave .tag':    function (ev) {
-            $(ev.currentTarget).toggleClass('trans');
-        },
-        'click .tag, .trans': function (ev) {
-            var icon = $(ev.currentTarget);
-            icon.toggleClass('tag');
-        },
-        'click #advanced-filter-toggle': function(ev){
-            ev.preventDefault();
-            $("#advanced-filters-top").toggleClass("invisible", 'slow');
-        }
-
-    });
-
-    Template.landing.rendered = function(){
-        //First check if we have items in collection and create samples if nothing found
-        if(GeoData.find({}, {order: {price: 1}}).count() > 0){
-            var properties = GeoData.find({}, {order: {price: 1}}).fetch();
-        } else{
-            var properties = [{price: 150}, {price: 1235}];
-        }
-        //Attach slider to price
-        $('#price-slider').noUiSlider({
-            connect: true,
-            start: [parseInt(properties[0].price) + 10, parseInt(properties[properties.length - 1].price) - 10],
-            range: {
-                'min': [properties[0].price],
-                'max': [properties[properties.length - 1].price]
-            },
-            step: 10
-        });
-        //Show values selected on price slider
-        $('#price-slider').Link('upper').to($('#price-slider-value-max'));
-        $('#price-slider').Link('lower').to($('#price-slider-value-min'));
-
-        //Make location select more functional by attaching 2Select
-        $('#top-location-filter').select2({
-            allowClear: true,
-            placeholder: "Select locations"
-            //multiple: true
-        });
-
-    };
 
     Template.sidebar.events({
         'click #adv-filter': function (event) {
@@ -133,64 +109,9 @@ if (Meteor.isClient) {
         },
     });
 
-    Template.googlemap.rendered = function () {
-        this.autorun(_.bind(function () {
-            if (GeoData.findOne())
-                var test = GeoData.find();
-            else
-                var test = {long: 104.8921668, lat: 11.5448729};
-            if (GoogleMaps.ready()) {
-                this.mapOptions = {
-                    center:      new google.maps.LatLng(11.5448729, 104.8921668),
-                    zoom:        14,
-                    scrollwheel: false
-                };
-                this.map = new google.maps.Map(this.find("#map-canvas"), this.mapOptions);
-                var self = this;
-                test.forEach(function (item) {
-                    if (item.security < 3) {
-                        var fillColor = '#FF0033';
-                    }
-                    else if (item.security == 5) {
-                        var fillColor = '#99FF33';
-                    }
-                    else {
-                        var fillColor = '#CCFF00';
-                    }
-
-                    this.populationOptions = {
-                        strokeColor:   '#FF0000',
-                        strokeOpacity: 0.4,
-                        strokeWeight:  2,
-                        fillColor:     fillColor,
-                        fillOpacity:   0.35,
-                        map:           self.map,
-                        //center: new google.maps.LatLng(11.6449730,104.8921668),
-                        center:        new google.maps.LatLng(item.location.lat, item.location.long),
-                        radius:        500
-                    };
-                    var marker = new google.maps.Marker({
-                        position: new google.maps.LatLng(item.location.lat, item.location.long),
-                        map:      self.map,
-                        title:    item.title
-                    });
-                    marker.setMap(self.map);
-                    this.cityCircle = new google.maps.Circle(this.populationOptions);
-                });
-            }
-        }, this));
-    };
-
-    Template.landing.helpers({
-        dots:     GeoData.find({}, {limit: 4}),
-        getFirst: function (items) {
-            return items[0]
-        },
-
-    });
 
     Template.search.helpers({
-        dots:      GeoData.find({}, {limit: 4}),
+        dots:      PropertyCollection.find({}, {limit: 4}),
         getFirst:  function (items) {
             return items[0]
         },
@@ -213,3 +134,18 @@ if (Meteor.isClient) {
     });
 
 }
+
+var addMarkerListener = function(marker, infoWindow, place, map){
+    google.maps.event.addListener(marker, 'click', function() {
+        var image = '';
+        if(typeof place.photos !== "undefined" && place.photos.length > 0){
+            image = "<img src='" + place.photos[0].getUrl({maxWidth: 200}) + "'>"
+        }
+        infoWindow.setContent("<h2>"+place.name+"</h2>"+image);
+        infoWindow.open(map, this);
+    });
+
+    google.maps.event.addListener(marker, 'mouseout', function() {
+        infoWindow.close();
+    });
+};

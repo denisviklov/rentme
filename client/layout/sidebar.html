@@ -1,0 +1,171 @@
+
+<template name="sidebar">
+    <!-- Sidebar -->
+    <div class="col-sm-12 col-md-3">
+        <div class="panel panel-secondary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Filter</h3>
+            </div>
+
+            <div class="panel-body">
+                <form action="" role="form">
+                    <label for="">Search:</label>
+                    <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                        <optgroup label="Personal:">
+                            <option>Apartment</option>
+                            <option>Condo</option>
+                            <option>Villa</option>
+                        </optgroup>
+                        <optgroup label="Business:">
+                            <option>Office</option>
+                            <option>Warehouse</option>
+                            <option>Studio</option>
+                        </optgroup>
+                    </select>
+                    <div class="filter-wrapper">
+                        <label for="">Location:</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' data-live-search="true" data-style="btn-primary">
+                            <optgroup label="Location:">
+                                <option>Phnom Penh</option>
+                                <option>Siem Reap</option>
+                                <option>Sihanoukville</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="filter-wrapper">
+                        <label for="">Price:</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                            <optgroup label="Price:">
+                                <option>0-100$</option>
+                                <option>100-300$</option>
+                                <option>300-500$</option>
+                                <option>500-1000$</option>
+                                <option>over 1000$</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="filter-wrapper">
+                        <label for="">Security:</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                            <optgroup label="Security:">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="filter-wrapper">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> with furniture
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-wrapper">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> verified
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-wrapper adv hidden">
+                        <label for="">Bedrooms:</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                            <optgroup label="Bedrooms:">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="filter-wrapper adv hidden">
+                        <label for="">Bathrooms:</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                            <optgroup label="Bathrooms:">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="filter-wrapper adv hidden">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> garage
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-wrapper adv hidden">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> pool
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-wrapper adv hidden">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> wifi
+                            </label>
+                        </div>
+                    </div>
+                    <div class="filter-wrapper">
+                        <center><a href="#" id="adv-filter" class="btn btn-default">Advanced filters</a></center>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.panel -->
+        <div class="widget">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab-1" data-toggle="tab">Favorite list</a></li>
+                <li><a href="#tab-2" data-toggle="tab">Popular</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade active in" id="tab-1">
+                    <ul class="list-unstyled">
+                        <li><h3 class="h5"><i class="fa fa-heart-o"></i> <a href="/detailed/1/">40 Devils Hill Road, Jackson, MS 39211</a></h3></li>
+                        <li><h3 class="h5"><i class="fa fa-heart-o"></i> <a href="/detailed/1/">40 Devils Hill Road, Jackson, MS 39211</a></h3></li>
+                        <li><h3 class="h5"><i class="fa fa-heart-o"></i> <a href="/detailed/1/">40 Devils Hill Road, Jackson, MS 39211</a></h3></li>
+                        <li><h3 class="h5"><i class="fa fa-heart-o"></i> <a href="/detailed/1/">40 Devils Hill Road, Jackson, MS 39211</a></h3></li>
+                        <li><h3 class="h5"><i class="fa fa-heart-o"></i> <a href="/detailed/1/">40 Devils Hill Road, Jackson, MS 39211</a></h3></li>
+                        <li><h3 class="h5"><i class="fa fa-heart-o"></i> <a href="/detailed/1/">40 Devils Hill Road, Jackson, MS 39211</a></h3></li>
+                    </ul>
+                </div>
+                <!-- /.tab-pane -->
+                <div class="tab-pane fade" id="tab-2">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h3 class="h5"><i class="fa fa-comment-o"></i> <a href="/detailed/1/">Efficiently Modifying Posts</a></h3>
+                            <p>Color manipulation in Photoshop can be used to correct mistakes...</p>
+                        </li>
+                        <li>
+                            <h3 class="h5"><i class="fa fa-comment-o"></i> <a href="/detailed/1/">Taxonomy Regulation</a></h3>
+                            <p>You can’t design without type. However, you can use only type (or mostly only type)...</p>
+                        </li>
+                        <li>
+                            <h3 class="h5"><i class="fa fa-comment-o"></i> <a href="/detailed/1/">7 Things You Love</a></h3>
+                            <p>Continuing from Part 1, let’s extend into tools for linting, measuring performance, checking for...</p>
+                        </li>
+                    </ul>
+                </div><!-- /.tab-pane -->
+            </div><!-- /.tab-content -->
+        </div><!-- /.widget -->
+        <div class="widget">
+            <h3 class="h5">Advertising</h3>
+            <ul class="img-stream">
+                <li><a href="/detailed/1/"><img class="media-object" data-src="holder.js/125x125/#2A2F37:#ffffff" alt="img"></a></li>
+                <li><a href="/detailed/1/"><img class="media-object" data-src="holder.js/125x125/#2A2F37:#ffffff" alt="img"></a></li>
+                <li><a href="/detailed/1/"><img class="media-object" data-src="holder.js/125x125/#2A2F37:#ffffff" alt="img"></a></li>
+                <li><a href="/detailed/1/"><img class="media-object" data-src="holder.js/125x125/#2A2F37:#ffffff" alt="img"></a></li>
+                <li><a href="/detailed/1/"><img class="media-object" data-src="holder.js/125x125/#2A2F37:#ffffff" alt="img"></a></li>
+                <li><a href="/detailed/1/"><img class="media-object" data-src="holder.js/125x125/#2A2F37:#ffffff" alt="img"></a></li>
+            </ul>
+        </div><!-- /.widget -->
+    </div><!-- /.col --> <!-- End of sidebar -->
+</template>

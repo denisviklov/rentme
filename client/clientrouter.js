@@ -6,11 +6,9 @@ Router.configure({
   before: function(){
     console.log(this.route._path);
     if(!Meteor.user() && this.route._path == '/agentarea'){
-      console.log(this.route.name);
       Router.go('login');
       this.stop();
     }
-
     if(Meteor.user()){
       Router.go('agentarea');
     }
@@ -36,7 +34,6 @@ Router.map(function(){
   this.route('agentarea');
   this.route('logout', {
     onRun: function(){
-      console.log('logout');
       Meteor.logout();
       Router.go('/');
     }

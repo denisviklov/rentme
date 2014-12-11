@@ -1,0 +1,106 @@
+
+<template name="hero">
+    <!-- hero -->
+    <section class="wrapper-lg bg-custom-home">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="widget padding-lg bg-dark">
+                        <h1 class="heading-lg text-center text-light">Find a place that you'll love</h1>
+                        <br class="spacer-lg">
+                        <form action="" class="form-inline">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="">Search:</label>
+                                    <select class="" title='Choose One' data-style="btn-primary" id="top-type-filter">
+                                        <optgroup label="Personal:">
+                                            <option>Apartment</option>
+                                            <option>Condo</option>
+                                            <option>Villa</option>
+                                        </optgroup>
+                                        <optgroup label="Business:">
+                                            <option>Office</option>
+                                            <option>Warehouse</option>
+                                            <option>Studio</option>
+                                        </optgroup>
+                                    </select>
+                                </div><!-- /.col -->
+                                <!--<div class="col-md-2">
+                                    <label for="">Status:</label>
+                                    <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                                        <optgroup label="Status:">
+                                            <option>Rent</option>
+                                            <option>Sale</option>
+                                        </optgroup>
+                                    </select>
+                                </div>--><!-- /.col -->
+                                <div class="col-md-3">
+                                    <label for="location">Location:</label>
+                                    <select class="" title='Choose One' data-live-search="true" data-style="btn-primary" id="top-location-filter" name="location">
+                                        <optgroup label="Location:">
+                                            {{#each getCities }}
+                                                <option value="{{title}}">{{title}}</option>
+                                            {{/each}}
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="district">Area:</label>
+                                    <select class="" title='Choose One' data-live-search="true" data-style="btn-primary" id="top-district-filter" name="district">
+
+                                    </select>
+                                </div>
+                                <!--<div class="col-md-3">-->
+                                <!--<label for="">Guards:</label>-->
+                                <!--<select class="form-control selectpicker show-tick" title='Choose One' data-live-search="true" data-style="btn-primary">-->
+                                <!--<optgroup label="Location:">-->
+                                <!--<option>Yes</option>-->
+                                <!--<option>No</option>-->
+                                <!--</optgroup>-->
+                                <!--</select>-->
+                                <!--</div>-->
+                                <div class="col-md-2">
+                                    <label for="">Price from: <span id="price-slider-value-min"></span>
+                                        <br/>
+                                        Price to: <span id="price-slider-value-max"></span>
+                                    </label>
+                                    <div id="price-slider">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1 col-md-offset-5">
+                                    <label for=""></label>
+                                    <a class="btn btn-success btn-lg" href="#" id="advanced-filter-toggle">
+                                        More filters <span class="glyphicon glyphicon-chevron-down"></span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10 invisible" id="advanced-filters-top">
+                                    <div class="col-md-2">
+                                        Some filter
+                                    </div>
+                                    <div class="col-md-2">
+                                        Some filter
+                                    </div>
+                                    <div class="col-md-2">
+                                        Some filter
+                                    </div>
+                                    <div class="col-md-2">
+                                        Some filter
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-md-offset-5">
+                                    <label for=""> </label>
+                                    <a href="/search" class="btn btn-primary btn-block">Search <span class="glyphicon glyphicon-search"></span></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div><!-- /.widget -->
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+    <!-- /hero -->
+</template>

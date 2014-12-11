@@ -1,0 +1,85 @@
+[
+
+    {
+        "images" : [
+            "https://www.filepicker.io/api/file/wU1fWg9BTgKySAJ5Jwot",
+            "https://www.filepicker.io/api/file/oU1OAL96S8mzUo0nLUbI"
+        ],
+        "title" : "Brand New Apartment for rent 1BR:$270/m Near Independent mon",
+        "description" : "Stereo Apartment for rent<br />Great location near independent monument,quiet,safe,no flooding<br />rental Price: $270/m<br />include<br />Free : Wi-Fi ,Cable T/V,.......<br />1bedroom<br />1bathroom<br />nice  Balcony<br />Fully furnished<br />A.C<br />Fridge<br />Sofa<br />Bed with Mattress<br />coffee table<br />Gas with stove.......ect<br />Please contact  on Tel: 092 20 30 39<br />Free customer service",
+        "price" : 270,
+        "square" : 130,
+        "yearOfBuilding" : 2007,
+        "bedrooms" : 2,
+        "garage" : false,
+        "wifi" : true,
+        "security" : 3,
+        "baths" : 1,
+        "type" : "House",
+        "pool" : null,
+        "location": {
+            "lat":  11.544873, "long": 104.892167
+        }
+    },
+    {
+        "images" : [
+            "https://www.filepicker.io/api/file/wU1fWg9BTgKySAJ5Jwot",
+            "https://www.filepicker.io/api/file/oU1OAL96S8mzUo0nLUbI"
+        ],
+        "title" : "Apartment for rent",
+        "description" : "Stereo Apartment for rent<br />Great location near independent monument,quiet,safe,no flooding<br />rental Price: $270/m<br />include<br />Free : Wi-Fi ,Cable T/V,.......<br />1bedroom<br />1bathroom<br />nice  Balcony<br />Fully furnished<br />A.C<br />Fridge<br />Sofa<br />Bed with Mattress<br />coffee table<br />Gas with stove.......ect<br />Please contact  on Tel: 092 20 30 39<br />Free customer service",
+        "price" : 350,
+        "square" : 130,
+        "yearOfBuilding" : 2007,
+        "bedrooms" : 2,
+        "garage" : false,
+        "wifi" : true,
+        "security" : 3,
+        "baths" : 1,
+        "type" : "Apartment",
+        "pool" : null,
+        "location": {"lat":  11.553898, "long": 104.900122}
+    },
+    {
+        "images" : [
+            "https://www.filepicker.io/api/file/3nb5wkcHRbuTQi7vIJzg",
+            "https://www.filepicker.io/api/file/raw9VDuQ5eVs0t6iPVp7",
+            "https://www.filepicker.io/api/file/5obBdEdNQAaE63MdAPmq",
+            "https://www.filepicker.io/api/file/nAu3OcswSBCUmT69y5Vj"
+        ],
+        "title" : "Best Apartment ever",
+        "description" : "Stereo Apartment for rent<br />Great location near independent monument,quiet,safe,no flooding<br />rental Price: $270/m<br />include<br />Free : Wi-Fi ,Cable T/V,.......<br />1bedroom<br />1bathroom<br />nice  Balcony<br />Fully furnished<br />A.C<br />Fridge<br />Sofa<br />Bed with Mattress<br />coffee table<br />Gas with stove.......ect<br />Please contact  on Tel: 092 20 30 39<br />Free customer service",
+        "price" : 600,
+        "square" : 60,
+        "yearOfBuilding" : 2012,
+        "bedrooms" : 1,
+        "garage" : true,
+        "wifi" : true,
+        "security" : 5,
+        "baths" : 1,
+        "type" : "Apartment",
+        "pool" : 1,
+        "location": {"lat":  11.578116, "long": 104.902182}
+    },
+    {
+        "images" : [
+            "https://www.filepicker.io/api/file/uW0adQ01StaNUnW3yPZ8",
+            "https://www.filepicker.io/api/file/ToeScfl2T6KNE2hqNBTq",
+            "https://www.filepicker.io/api/file/DSd8VIQCRbC6wDZAaGje"
+        ],
+        "title" : "Awesome cheap apartment",
+        "description" : "Stereo Apartment for rent<br />Great location near independent monument,quiet,safe,no flooding<br />rental Price: $270/m<br />include<br />Free : Wi-Fi ,Cable T/V,.......<br />1bedroom<br />1bathroom<br />nice  Balcony<br />Fully furnished<br />A.C<br />Fridge<br />Sofa<br />Bed with Mattress<br />coffee table<br />Gas with stove.......ect<br />Please contact  on Tel: 092 20 30 39<br />Free customer service",
+        "price" : 150,
+        "square" : 30,
+        "yearOfBuilding" : 1970,
+        "bedrooms" : 1,
+        "garage" : true,
+        "wifi" : true,
+        "security" : 2,
+        "baths" : 1,
+        "type" : "Apartment",
+        "pool" : null,
+        "location": {"lat":  11.565310, "long": 104.841999}
+    }
+
+]

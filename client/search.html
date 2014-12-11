@@ -1,0 +1,162 @@
+<template name="search">
+    <section class="wrapper-md">
+        <div class="container">
+            <div class="row">
+                <!-- Main -->
+                {{> sidebar}}
+                <div class="col-sm-12 col-md-9">
+                    <div class="row">
+                        <article class="post">
+                            <div class="panel panel-secondary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Featured Result</h3>
+                                </div>
+                                <div class="panel-body bg-highlight">
+                                    <div class="col-sm-12 col-md-5">
+                                        <a href="/detailed/1/"><img class="img-responsive img-thumbnail" src="img/item-large.jpg"></a>
+                                    </div><!-- /.col -->
+                                    <div class="col-sm-12 col-md-7">
+                                        <h3><a href="/detailed/1/">294 River Road, <span class="text-muted">Phnom Penh, 95492</span></a></h3>
+                                        <p><span class="label label-danger">SPONSORED</span> This home offers a great floor plan with kitchen open to a spacious living room and dining area.</p>
+                                        <ul class="list-unstyled">
+                                            <li><i class="fa fa-fw fa-th"></i> 145 M<sup>2</sup></li>
+                                            <li><i class="fa fa-fw fa-columns"></i> 2 Beds</li>
+                                            <li><i class="fa fa-fw fa-female"></i> 1,5 Bathrooms</li>
+                                            <li><i class="fa fa-fw fa-truck"></i> Garage</li>
+                                            <li><i class="fa fa-fw fa-signal"></i> Internet</li>
+                                        </ul>
+                                        <p><a href="/detailed/1/" class="btn btn-primary">View More »</a></p>
+                                    </div><!-- /.col -->
+                                </div><!-- /.panel-body -->
+                            </div><!-- /.panel -->
+                        </article><!-- /.post -->
+                    </div><!-- /.row -->
+                    <div class="row">
+                        {{#each dots}}
+                        <article class="post">
+                            <div class="col-sm-12 col-md-5">
+                                <a href="/detailed/1/"><img class="img-responsive img-thumbnail" src="{{getFirst images}}"></a>
+                            </div><!-- /.col -->
+                            <div class="col-sm-12 col-md-7">
+                                <h3><a href="/detailed/1/">Lane {{getRandom}}, <span class="text-muted">Phnom Penh, CO 80537</span></a></h3>
+                                <p>This home offers a great floor plan with kitchen open to a spacious living room and dining area.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-fw fa-th"></i> 1.460 Ft<sup>2</sup></li>
+                                    <li><i class="fa fa-fw fa-columns"></i> 2 Beds</li>
+                                    <li><i class="fa fa-fw fa-female"></i> 1,5 Bathrooms</li>
+                                    <li><i class="fa fa-fw fa-truck"></i> 2 Garage</li>
+                                    <li><i class="fa fa-fw fa-signal"></i> Internet</li>
+                                </ul>
+                                <p><a href="/detailed/1/" class="btn btn-primary">View More »</a></p>
+                            </div><!-- /.col -->
+                        </article><!-- /.post -->
+                        {{/each}}
+                    </div><!-- /.row -->
+                    <div class="row">
+                        <article class="post">
+                            <div class="col-sm-12 col-md-5">
+                                <a href="/detailed/1/"><img class="img-responsive img-thumbnail" src="img/item-small.jpg"></a>
+                            </div><!-- /.col -->
+                            <div class="col-sm-12 col-md-7">
+                                <h3><a href="/detailed/1/">40 Main Road, <span class="text-muted">Phnom Penh, MS 39211</span></a></h3>
+                                <p>This home offers a great floor plan with kitchen open to a spacious living room and dining area.</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fa fa-fw fa-th"></i> 1.460 Ft<sup>2</sup></li>
+                                    <li><i class="fa fa-fw fa-columns"></i> 2 Beds</li>
+                                    <li><i class="fa fa-fw fa-female"></i> 1,5 Bathrooms</li>
+                                    <li><i class="fa fa-fw fa-truck"></i> 2 Garage</li>
+                                    <li><i class="fa fa-fw fa-signal"></i> Internet</li>
+                                </ul>
+                                <p><a href="/detailed/1/" class="btn btn-primary">View More »</a></p>
+                            </div><!-- /.col -->
+                        </article><!-- /.post -->
+                    </div><!-- /.row -->
+
+                    <!-- Suggestions -->
+                    <h2>More suggestions:</h2>
+                    <p class="lead">View similar items tailored for you</p>
+
+                    <div class="row">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="thumbnail">
+                                <div class="overlay-container">
+                                    <img src="img/item-small.jpg">
+                                    <div class="overlay-content">
+                                        <h3 class="h4 headline">Great Deal</h3>
+                                        <p>So you know you're getting a top quality property from an experienced team.</p>
+                                    </div><!-- /.overlay-content -->
+                                </div><!-- /.overlay-container -->
+                                <div class="thumbnail-meta">
+                                    <p><i class="fa fa-fw fa-home"></i> 1199 Pacific Hwy #110</p>
+                                    <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
+                                </div>
+                                <div class="thumbnail-meta">
+                                    <i class="fa fa-fw fa-info-circle"></i> 1460 Ft | 2 Bed | 1,5 Bath | 2 Garage
+                                </div>
+                                <div class="thumbnail-meta">
+                                    <i class="fa fa-fw fa-dollar"></i> <span class="h3">350.000</span> <a href="/detailed/1/" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div><!-- /.thumbnail -->
+                        </div><!-- /.col -->
+                        <div class="col-sm-12 col-md-4">
+                            <div class="thumbnail">
+                                <div class="overlay-container">
+                                    <img src="img/item-small.jpg">
+                                    <div class="overlay-content">
+                                        <h3 class="h4 headline">Great Deal</h3>
+                                        <p>So you know you're getting a top quality property from an experienced team.</p>
+                                    </div><!-- /.overlay-content -->
+                                </div><!-- /.overlay-container -->
+                                <div class="thumbnail-meta">
+                                    <p><i class="fa fa-fw fa-home"></i> 1199 Pacific Hwy #110</p>
+                                    <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
+                                </div>
+                                <div class="thumbnail-meta">
+                                    <i class="fa fa-fw fa-info-circle"></i> 1460 Ft | 2 Bed | 1,5 Bath | 2 Garage
+                                </div>
+                                <div class="thumbnail-meta">
+                                    <i class="fa fa-fw fa-dollar"></i> <span class="h3">350.000</span> <a href="/detailed/1/" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div><!-- /.thumbnail -->
+                        </div><!-- /.col -->
+                        <div class="col-sm-12 col-md-4">
+                            <div class="thumbnail">
+                                <div class="overlay-container">
+                                    <img src="img/item-small.jpg">
+                                    <div class="overlay-content">
+                                        <h3 class="h4 headline">Great Deal</h3>
+                                        <p>So you know you're getting a top quality property from an experienced team.</p>
+                                    </div><!-- /.overlay-content -->
+                                </div><!-- /.overlay-container -->
+                                <div class="thumbnail-meta">
+                                    <p><i class="fa fa-fw fa-home"></i> 1199 Pacific Hwy #110</p>
+                                    <p><i class="fa fa-fw fa-map-marker"></i> San Diego, CA 92101</p>
+                                </div>
+                                <div class="thumbnail-meta">
+                                    <i class="fa fa-fw fa-info-circle"></i> 1460 Ft | 2 Bed | 1,5 Bath | 2 Garage
+                                </div>
+                                <div class="thumbnail-meta">
+                                    <i class="fa fa-fw fa-dollar"></i> <span class="h3">350.000</span> <a href="/detailed/1/" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div><!-- /.thumbnail -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row --> <!-- End of suggestions -->
+
+                    <!-- Pagination -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <ul class="pagination pagination-lg">
+                                <li><a href="#">«</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li class="disabled"><a href="#">5</a></li>
+                                <li><a href="#">»</a></li>
+                            </ul><!-- /.pagination -->
+                        </div><!-- /.col -->
+                    </div><!-- /.row --> <!-- End of pagination -->
+                </div></div></div></section>
+</template>

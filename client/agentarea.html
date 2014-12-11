@@ -1,0 +1,111 @@
+<template name="agentarea">
+    <section class="wrapper-md">
+        <div class="container">
+            <div class="row">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="/agentarea/create">New ad</a></li>
+                    <li role="presentation"><a href="/agentarea/myads">My ads</a></li>
+                    <li role="presentation"><a href="/agentarea/profile">Profile</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 class="filter-wrapper">New ad</h3>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="">Address</label>
+                        <input type="text" class="form-control" name="address" placeholder="Enter address">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Type</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' name="type" data-style="btn-primary">
+                            <optgroup label="Personal:">
+                                <option>Apartment</option>
+                                <option>Condo</option>
+                                <option>Villa</option>
+                            </optgroup>
+                            <optgroup label="Business:">
+                                <option>Office</option>
+                                <option>Warehouse</option>
+                                <option>Studio</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Location:</label>
+                        <select class="form-control selectpicker show-tick" name="location" title='Choose One' data-live-search="true" data-style="btn-primary">
+                            <optgroup label="Location:">
+                                <option>Phnom Penh</option>
+                                <option>Siem Reap</option>
+                                <option>Sihanoukville</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Price</label>
+                        <input type="text" class="form-control" name="price" placeholder="Enter price">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Bedrooms:</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                            <optgroup label="Bedrooms:">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Bathrooms:</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                            <optgroup label="Bathrooms:">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Security:</label>
+                        <select class="form-control selectpicker show-tick" title='Choose One' data-style="btn-primary">
+                            <optgroup label="Security:">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> with furniture
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> pool
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> garage
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox"> wifi
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <button id="upload">Upload Images</button>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</template>

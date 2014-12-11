@@ -1,0 +1,152 @@
+[
+    {
+        "_id": "54893f7000bd1397815ce13c",
+        "street": "Goodwin Place",
+        "building": 313
+    },
+    {
+        "_id": "54893f706a8b59249dd412cd",
+        "street": "Banner Avenue",
+        "building": 392
+    },
+    {
+        "_id": "54893f70130d257d0a1e25ed",
+        "street": "Lawn Court",
+        "building": 901
+    },
+    {
+        "_id": "54893f7091bf35ae7dd7e120",
+        "street": "Clymer Street",
+        "building": 773
+    },
+    {
+        "_id": "54893f70294cefc7231512cb",
+        "street": "Blake Court",
+        "building": 255
+    },
+    {
+        "_id": "54893f701ea1660ed2409729",
+        "street": "Perry Terrace",
+        "building": 967
+    },
+    {
+        "_id": "54893f70f449ac660ed4a936",
+        "street": "Thames Street",
+        "building": 406
+    },
+    {
+        "_id": "54893f707d232b0b8cae7bd5",
+        "street": "Pitkin Avenue",
+        "building": 96
+    },
+    {
+        "_id": "54893f700d0526b4e573c1ae",
+        "street": "Anna Court",
+        "building": 56
+    },
+    {
+        "_id": "54893f706ce2458a318f50ee",
+        "street": "Overbaugh Place",
+        "building": 492
+    },
+    {
+        "_id": "54893f706f567cfbe1ead672",
+        "street": "Strauss Street",
+        "building": 984
+    },
+    {
+        "_id": "54893f70aa0c0b50c92b24a9",
+        "street": "Ingraham Street",
+        "building": 268
+    },
+    {
+        "_id": "54893f70f198ec28d69bcbc3",
+        "street": "Richards Street",
+        "building": 688
+    },
+    {
+        "_id": "54893f709d10f2ff2e03d310",
+        "street": "Bergen Place",
+        "building": 795
+    },
+    {
+        "_id": "54893f70df68654d179fa24c",
+        "street": "Conway Street",
+        "building": 275
+    },
+    {
+        "_id": "54893f70f7c3a90f9fd62c4b",
+        "street": "Hoyts Lane",
+        "building": 610
+    },
+    {
+        "_id": "54893f709a080def492988af",
+        "street": "Covert Street",
+        "building": 522
+    },
+    {
+        "_id": "54893f705d8e671d9b725fa4",
+        "street": "Devoe Street",
+        "building": 677
+    },
+    {
+        "_id": "54893f70a84affda8efabfb7",
+        "street": "Homecrest Court",
+        "building": 354
+    },
+    {
+        "_id": "54893f70111a8246c359e29f",
+        "street": "Ferry Place",
+        "building": 183
+    },
+    {
+        "_id": "54893f700794f37289ae9dd9",
+        "street": "Humboldt Street",
+        "building": 278
+    },
+    {
+        "_id": "54893f70d3a62a851bf982f1",
+        "street": "Lloyd Court",
+        "building": 701
+    },
+    {
+        "_id": "54893f70ef4b2175081ff77b",
+        "street": "Ruby Street",
+        "building": 548
+    },
+    {
+        "_id": "54893f701dab81a4a0d3177a",
+        "street": "Dewey Place",
+        "building": 108
+    },
+    {
+        "_id": "54893f7073c3a98792d6c6b7",
+        "street": "Sheffield Avenue",
+        "building": 244
+    },
+    {
+        "_id": "54893f70c59e43852d2631e4",
+        "street": "Highland Avenue",
+        "building": 705
+    },
+    {
+        "_id": "54893f70c4f59800b78943c4",
+        "street": "Brown Street",
+        "building": 446
+    },
+    {
+        "_id": "54893f70d55d33483e9fc941",
+        "street": "Fillmore Place",
+        "building": 842
+    },
+    {
+        "_id": "54893f708674928a12e96d18",
+        "street": "Murdock Court",
+        "building": 516
+    },
+    {
+        "_id": "54893f70b62479539221fa30",
+        "street": "Lewis Place",
+        "building": 640
+    }
+]

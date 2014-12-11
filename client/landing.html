@@ -1,0 +1,47 @@
+<template name="landing">
+    {{> hero}}
+    <section class="wrapper-md">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3>Safety map:</h3>
+                </div>
+                {{>googlemap}}
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+
+    {{> poi}}
+
+    <section class="wrapper-md bg-primary">
+        <div class="container">
+            <h2 class="text-center headline">Featured This Week</h2>
+            <br class="spacer-lg">
+            <div class="row">
+                {{#each dots}}
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail text-default">
+                        <div class="overlay-container">
+                            <img src="{{getFirst images}}">
+                            <div class="overlay-content">
+                                <h3 class="h4 headline">{{type}}</h3>
+                                <p>{{title}}</p>
+                            </div><!-- /.overlay-content -->
+                        </div><!-- /.overlay-container -->
+                        <div class="thumbnail-meta">
+                            <p><i class="fa fa-fw fa-home"></i>{{ title}}</p>
+                            <p><i class="fa fa-fw fa-map-marker"></i>{{getAddress this}}</p>
+                        </div>
+                        <div class="thumbnail-meta">
+                            <i class="fa fa-fw fa-info-circle"></i> {{square}} M | {{bedrooms}} Bed | {{baths}} Bath | {{#if garage}} Garage{{/if}}
+                        </div>
+                        <div class="thumbnail-meta">
+                            <i class="fa fa-fw fa-dollar"></i> <span class="h3 heading-default">{{price}}</span> <a href="/detailed/1/" class="btn btn-link pull-right">View <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    </div><!-- /.thumbnail -->
+                </div><!-- /.col -->
+                {{/each}}
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+</template>
