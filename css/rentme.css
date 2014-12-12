@@ -1,4 +1,7 @@
 .filter-wrapper {margin-top: 1em;}
 .hidden {display: None;}
 .trans {opacity: 0.5;}
-.active-tag{opacity: 1;}
+
+.active-tag {
+    opacity: 1;
+}
